@@ -19,7 +19,7 @@ public class Mano {
 		this.forma = forma;
 	}
 
-	private static final Map<Integer, List<Integer>> juego = new HashMap<Integer, List<Integer>>() {
+	private static final Map<Integer, List<Integer>> JUEGO = new HashMap<Integer, List<Integer>>() {
 		{
 			put(Forma.PIEDRA.getValor(), Arrays.asList(Forma.LAGARTO.getValor(), Forma.TIJERA.getValor()));
 			put(Forma.SPOCK.getValor(), Arrays.asList(Forma.PIEDRA.getValor(), Forma.TIJERA.getValor()));
@@ -34,7 +34,7 @@ public class Mano {
 	}
 
 	public Resultado jugarCon(final Mano otra) {
-		if (juego.get(this.forma.getValor()).contains(otra.forma.getValor())) {
+		if (JUEGO.get(this.forma.getValor()).contains(otra.forma.getValor())) {
 			return Resultado.GANA;
 		} else if (this.forma.getValor() == otra.forma.getValor()) {
 			return Resultado.EMPATA;
