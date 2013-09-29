@@ -11,8 +11,8 @@ public class PartidaTests {
 		Mano jugadorUno = new Mano(Forma.SPOCK);
 		Mano jugadorDos = new Mano(Forma.PIEDRA);
 
-		assertEquals("Spock vaporiza piedra",
-				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+		assertEquals("Spock vaporiza piedra", Resultado.GANA,
+				jugadorUno.jugarCon(jugadorDos));
 
 	}
 
@@ -22,8 +22,8 @@ public class PartidaTests {
 		Mano jugadorUno = new Mano(Forma.SPOCK);
 		Mano jugadorDos = new Mano(Forma.TIJERA);
 
-		assertEquals("Spock destroza tijera",
-				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+		assertEquals("Spock destroza tijera", Resultado.GANA,
+				jugadorUno.jugarCon(jugadorDos));
 
 	}
 
@@ -33,8 +33,8 @@ public class PartidaTests {
 		Mano jugadorUno = new Mano(Forma.TIJERA);
 		Mano jugadorDos = new Mano(Forma.PAPEL);
 
-		assertEquals("Tijera corta papel",
-				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+		assertEquals("Tijera corta papel", Resultado.GANA,
+				jugadorUno.jugarCon(jugadorDos));
 
 	}
 
@@ -44,8 +44,8 @@ public class PartidaTests {
 		Mano jugadorUno = new Mano(Forma.TIJERA);
 		Mano jugadorDos = new Mano(Forma.LAGARTO);
 
-		assertEquals("Tijera decapita lagarto",
-				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+		assertEquals("Tijera decapita lagarto", Resultado.GANA,
+				jugadorUno.jugarCon(jugadorDos));
 
 	}
 
@@ -55,8 +55,8 @@ public class PartidaTests {
 		Mano jugadorUno = new Mano(Forma.PAPEL);
 		Mano jugadorDos = new Mano(Forma.PIEDRA);
 
-		assertEquals("Papel cubre piedra",
-				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+		assertEquals("Papel cubre piedra", Resultado.GANA,
+				jugadorUno.jugarCon(jugadorDos));
 
 	}
 
@@ -66,8 +66,8 @@ public class PartidaTests {
 		Mano jugadorUno = new Mano(Forma.PAPEL);
 		Mano jugadorDos = new Mano(Forma.SPOCK);
 
-		assertEquals("Papel refuta spock",
-				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+		assertEquals("Papel refuta spock", Resultado.GANA,
+				jugadorUno.jugarCon(jugadorDos));
 
 	}
 
@@ -77,8 +77,8 @@ public class PartidaTests {
 		Mano jugadorUno = new Mano(Forma.PIEDRA);
 		Mano jugadorDos = new Mano(Forma.LAGARTO);
 
-		assertEquals("Piedra aplasta lagarto",
-				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+		assertEquals("Piedra aplasta lagarto", Resultado.GANA,
+				jugadorUno.jugarCon(jugadorDos));
 
 	}
 
@@ -88,8 +88,8 @@ public class PartidaTests {
 		Mano jugadorUno = new Mano(Forma.PIEDRA);
 		Mano jugadorDos = new Mano(Forma.TIJERA);
 
-		assertEquals("Piedra aplasta tijera",
-				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+		assertEquals("Piedra aplasta tijera", Resultado.GANA,
+				jugadorUno.jugarCon(jugadorDos));
 
 	}
 
@@ -99,8 +99,8 @@ public class PartidaTests {
 		Mano jugadorUno = new Mano(Forma.LAGARTO);
 		Mano jugadorDos = new Mano(Forma.SPOCK);
 
-		assertEquals("Lagarto envenera spock",
-				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+		assertEquals("Lagarto envenera spock", Resultado.GANA,
+				jugadorUno.jugarCon(jugadorDos));
 
 	}
 
@@ -110,8 +110,8 @@ public class PartidaTests {
 		Mano jugadorUno = new Mano(Forma.LAGARTO);
 		Mano jugadorDos = new Mano(Forma.PAPEL);
 
-		assertEquals("Lagarto come papel",
-				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+		assertEquals("Lagarto come papel", Resultado.GANA,
+				jugadorUno.jugarCon(jugadorDos));
 
 	}
 

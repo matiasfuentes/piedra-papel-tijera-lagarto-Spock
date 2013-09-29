@@ -1,39 +1,42 @@
 package edu.tallerweb.pptls;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Representa una de las Manos involucradas en el juego
- */
 public class Mano {
-	Forma forma;
-	
-	private static final Map<Integer, List<Integer>> juego = new HashMap<Integer,List<Integer>>(){
+	private Forma forma;
+
+	public Forma getForma(){
+		return this.forma;
+	}
+
+	public void setForma(Forma forma){
+		this.forma = forma;
+	}
+
+	private static final Map<Integer, List<Integer>> juego = new HashMap<Integer, List<Integer>>() {
 		{
-			put(0, Arrays.asList(3,4));
-			put(1, Arrays.asList(0,4));
-			put(2, Arrays.asList(0,1));
-			put(3, Arrays.asList(1,2));
-			put(4, Arrays.asList(2,3));
+			put(Forma.PIEDRA.getValor(), Arrays.asList(Forma.LAGARTO.getValor(), Forma.TIJERA.getValor()));
+			put(Forma.SPOCK.getValor(), Arrays.asList(Forma.PIEDRA.getValor(), Forma.TIJERA.getValor()));
+			put(Forma.PAPEL.getValor(), Arrays.asList(Forma.PIEDRA.getValor(), Forma.SPOCK.getValor()));
+			put(Forma.LAGARTO.getValor(), Arrays.asList(Forma.SPOCK.getValor(), Forma.PAPEL.getValor()));
+			put(Forma.TIJERA.getValor(), Arrays.asList(Forma.PAPEL.getValor(), Forma.LAGARTO.getValor()));
 		}
 	};
-	
+
 	public Mano(final Forma forma) {
 		this.forma = forma;
 	}
 
 	public Resultado jugarCon(final Mano otra) {
-		if (juego.get(this.forma.getValor()).contains(otra.forma.getValor())){
+		if (juego.get(this.forma.getValor()).contains(otra.forma.getValor())) {
 			return Resultado.GANA;
-		}
-		else if (this.forma.getValor() == otra.forma.getValor()){
+		} else if (this.forma.getValor() == otra.forma.getValor()) {
 			return Resultado.EMPATA;
 		}
-		
+
 		return Resultado.PIERDE;
 	}
 
