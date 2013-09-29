@@ -5,14 +5,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Representa una de las Manos involucradas en el juego
+ */
 public class Mano {
 	private Forma forma;
 
-	public Forma getForma(){
+	public Forma getForma() {
 		return this.forma;
 	}
 
-	public void setForma(Forma forma){
+	public void setForma(final Forma forma) {
 		this.forma = forma;
 	}
 
